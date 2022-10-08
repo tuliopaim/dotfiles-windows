@@ -1,0 +1,18 @@
+# SYMBOLIC LINKS
+
+# NEOVIM
+New-Item -ItemType SymbolicLink -Path "$HOME\AppData\Local\nvim\" -Target "$HOME\.dotfiles\nvim" 
+
+# CS SNIPPETS
+New-Item -ItemType SymbolicLink -Path "$HOME\AppData\Local\coc\ultisnips" -Target "$HOME\.dotfiles\coc\ultisnips" 
+
+# POWERSHELL PROFILE
+New-Item -ItemType SymbolicLink `
+     -Path "$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" `
+     -Target "$HOME\.dotfiles\powershell\Microsoft.PowerShell_profile.ps1" 
+
+# VSVIM
+New-Item -ItemType SymbolicLink  -Path "$HOME\_vsvimrc"  -Target "$HOME\.dotfiles\vsvim\_vsvimrc" 
+
+# GIT 
+New-Item -ItemType SymbolicLink  -Path "$HOME\.gitconfig"  -Target "$HOME\.dotfiles\git\.gitconfig" 
