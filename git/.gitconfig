@@ -11,3 +11,5 @@
 	ignorecase = false
 [push]
 	autoSetupRemote = true
+[safe]
+	directory = C:/Users/tutpa/.dotfiles
