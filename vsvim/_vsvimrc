@@ -1,4 +1,29 @@
 set number relativenumber
 
+" map leader from , to space
+let mapleader = "\<Space>"
+
+" Tab Management
+nnoremap <Leader>t :vsc Window.NewVerticalTabGroup<CR>
+nnoremap <Leader>h :vsc Window.MoveToPreviousTabGroup<CR>
+nnoremap <Leader>l :vsc Window.MoveToNextTabGroup<CR>
 nnoremap gk gt
 nnoremap gj gT
+
+" Building
+map bs :vsc Build.BuildSolution<CR>
+map bp :vsc Build.BuildOnlyProject<CR>
+map bc :vsc Build.CleanSolution<CR>
+map gc :vsc Team.Git.GoToGitChanges<CR>
+
+" UI Hotkeys
+map sl :vsc View.SolutionExplorer<CR>
+nnoremap <Leader>. :vsc View.SolutionExplorer<CR>
+nnoremap <Leader>e :vsc View.ErrorList<cr>
+
+"helpers
+nnoremap K     :vsc Edit.QuickInfo<cr>
+nnoremap gk    :vsc Edit.PeekDefinition<cr>
+nnoremap gr    :vsc Edit.FindAllReferences<cr>
+
+
