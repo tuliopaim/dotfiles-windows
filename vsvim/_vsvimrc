@@ -11,19 +11,19 @@ nnoremap gk gt
 nnoremap gj gT
 
 " Building
-map bs :vsc Build.BuildSolution<CR>
-map bp :vsc Build.BuildOnlyProject<CR>
-map bc :vsc Build.CleanSolution<CR>
-map gc :vsc Team.Git.GoToGitChanges<CR>
+map <Leader>bs :vsc Build.BuildSolution<CR>
+map <Leader>bp :vsc Build.BuildOnlyProject<CR>
+map <Leader>bc :vsc Build.CleanSolution<CR>
+map <Leader>gc :vsc Team.Git.GoToGitChanges<CR>
 
 " UI Hotkeys
-map sl :vsc View.SolutionExplorer<CR>
 nnoremap <Leader>. :vsc View.SolutionExplorer<CR>
 nnoremap <Leader>e :vsc View.ErrorList<cr>
 
 "helpers
 nnoremap K     :vsc Edit.QuickInfo<cr>
-nnoremap gk    :vsc Edit.PeekDefinition<cr>
+nnoremap gK    :vsc Edit.PeekDefinition<cr>
 nnoremap gr    :vsc Edit.FindAllReferences<cr>
 
-
+"pastes the yanked only in visual mode
+"vnoremap p "0p
