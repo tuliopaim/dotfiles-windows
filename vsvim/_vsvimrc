@@ -4,7 +4,7 @@ set number relativenumber
 let mapleader = "\<Space>"
 
 " Tab Management
-nnoremap <Leader>t :vsc Window.NewVerticalTabGroup<CR>
+nnoremap <c-\> :vsc Window.NewVerticalTabGroup<CR>
 nnoremap <Leader>h :vsc Window.MoveToPreviousTabGroup<CR>
 nnoremap <Leader>l :vsc Window.MoveToNextTabGroup<CR>
 nnoremap gk gt
@@ -25,5 +25,5 @@ nnoremap K     :vsc Edit.QuickInfo<cr>
 nnoremap gK    :vsc Edit.PeekDefinition<cr>
 nnoremap gr    :vsc Edit.FindAllReferences<cr>
 
-"pastes the yanked only in visual mode
-"vnoremap p "0p
+vnoremap < <gv
+vnoremap > >gv
