@@ -1,31 +1,34 @@
 oh-my-posh init pwsh --config C:\Users\tutpa\AppData\Local\Programs\oh-my-posh\themes/bubbles.omp.json | Invoke-Expression
 
-# PSFzf Config
+# 
+# PSReadline
 
+Import-Module PSReadline
+Set-PSReadLineOption -EditMode Windows
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+
+#
+# FZF
 Import-Module PSFzf
 
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 $env:FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
-function ff{
-   nvim $(fzf)
-}
-
 # Aliases
+# 
 
-Function ChangeTo([string] $path) { Set-Location -Path $path }
+function ff{ nvim $(fzf) }
 
-Function ChangeToDev{ChangeTo('C:\dev\')}
-Function ChangeToDotFiles{ChangeTo('C:\Users\tutpa\.dotfiles\')}
-Function ChangeToParent{ChangeTo('..')}
-Function ChangeToParent2{ChangeTo('..\..')}
-Function ChangeToParent3{ChangeTo('..\..\..')}
+function ..{cd  ..}
+function ....{cd  ..\..}
+function ......{cd  ..\..\..}
 
-Set-Alias -Name dev -Value ChangeToDev
-Set-Alias -Name dotfiles -Value ChangeToDotFiles
-Set-Alias -Name .. -Value ChangeToParent
-Set-Alias -Name .... -Value ChangeToParent2
-Set-Alias -Name ...... -Value ChangeToParent3
+function dev{cd C:\dev\}
+function dotfiles{cd  C:\Users\tutpa\.dotfiles\}
+function home{cd  C:\Users\tutpa\}
 
-Clear
+function gs{git status}
+
+
