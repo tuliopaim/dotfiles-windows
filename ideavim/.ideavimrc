@@ -1,0 +1,63 @@
+set number relativenumber
+
+" no bells
+set visualbell
+set noerrorbells
+
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+
+sethandler <c-r> a:ide
+sethandler <c-w> a:ide
+
+" map leader from , to space
+let mapleader = "\<Space>"
+
+" Window Navigation
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
+nnoremap <leader>q :action CloseEditor<CR>
+nnoremap <leader>qa :action CloseAllEditors<CR>
+nnoremap <leader>gm :action Git.Menu<CR>
+
+" move between open tabs
+nnoremap gk gt
+nnoremap gj gT
+
+" Code editing
+nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap <leader>zc :action CollapseAllRegions<CR>
+nnoremap <leader>zo :action ExpandAllRegions<CR>
+
+vnoremap < <gv
+vnoremap > >gv
+
+" Source Code Navigation
+set incsearch
+
+nnoremap <c-t> :action GotoFile<CR>
+nnoremap gr :action FindUsages<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotToDeclaration<CR>
+nnoremap gd :action GotToDeclaration<CR>
+
+" Build
+nnoremap <leader>bs :action RebuildSolutionAction<CR>
+nnoremap <leader>bsp :action RebuildStartupProject<CR>
+
+" NERDTree"
+set NERDTree
+
+let g:NERDTreeMapJumpParent='h'
+nmap <Leader>. :NERDTreeFocus<CR>
+map <Leader>e :NERDTreeToggle<CR>

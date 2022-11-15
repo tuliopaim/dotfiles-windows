@@ -14,5 +14,8 @@ New-Item -ItemType SymbolicLink `
 # VSVIM
 New-Item -ItemType SymbolicLink  -Path "$HOME\_vsvimrc"  -Target "$HOME\.dotfiles\vsvim\_vsvimrc" 
 
+# IdeaVim
+New-Item -ItemType SymbolicLink  -Path "$HOME\.ideavimrc"  -Target "$HOME\.dotfiles\ideavim\.ideavimrc"
+
 # GIT 
 New-Item -ItemType SymbolicLink  -Path "$HOME\.gitconfig"  -Target "$HOME\.dotfiles\git\.gitconfig" 
