@@ -10,6 +10,9 @@ nnoremap <Leader>l :vsc Window.MoveToNextTabGroup<CR>
 nnoremap gk gt
 nnoremap gj gT
 
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
 " Building
 map <Leader>bs :vsc Build.BuildSolution<CR>
 map <Leader>bp :vsc Build.BuildOnlyProject<CR>
