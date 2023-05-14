@@ -4,19 +4,7 @@ lsp.preset('recommended')
 lsp.ensure_installed({
   'tsserver',
   'eslint',
-  'lua_ls',
   'csharp_ls',
-})
-
--- Fix Undefined global 'vim'
-lsp.configure('lua_ls', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
 })
 
 local check_backspace = function()
