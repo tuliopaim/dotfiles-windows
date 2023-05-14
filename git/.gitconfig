@@ -2,7 +2,7 @@
 	home = "config --global user.email 'tutpaim@gmail.com';"
 	tb = "config --global user.email 'tulio.p@thinkbridge.com';"
 [user]
-	email = "tulio.p@thinkbridge.com;"
+	email = "tutpaim@gmail.com;"
 	name = Túlio Paim
 [credential "https://gitlab.com"]
 	provider = generic
