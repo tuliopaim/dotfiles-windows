@@ -1,7 +1,18 @@
+" error bell off
+set belloff=all
+
+" Enable relative line numbers
 set number relativenumber
+
+" Enable incremental search
+set incsearch
+
+" Enable ignore case when searching with /
+set ignorecase smartcase
 
 " map leader from , to space
 let mapleader = "\<Space>"
+
 
 " Tab Management
 nnoremap <c-\> :vsc Window.NewVerticalTabGroup<CR>

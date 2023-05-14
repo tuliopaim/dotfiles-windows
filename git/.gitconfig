@@ -1,7 +1,8 @@
 [alias]
-	home = config --global user.email tutpaim@gmail.com
+	home = "config --global user.email 'tutpaim@gmail.com';"
+	tb = "config --global user.email 'tulio.p@thinkbridge.com';"
 [user]
-	email = tutpaim@gmail.com
+	email = "tulio.p@thinkbridge.com;"
 	name = Túlio Paim
 [credential "https://gitlab.com"]
 	provider = generic
@@ -9,6 +10,7 @@
 	prune = true
 [core]
 	ignorecase = false
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 [push]
 	autoSetupRemote = true
 [safe]
