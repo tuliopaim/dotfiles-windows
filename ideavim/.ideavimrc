@@ -6,13 +6,14 @@ set visualbell
 set noerrorbells
 
 set clipboard+=unnamed
-set clipboard+=ideaput
 
 " vim shortcuts
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
 sethandler <c-w> a:vim
 sethandler <c-n> a:vim
+sethandler <c-p> a:vim
+sethandler <c-a> a:vim
 
 " ide shortcuts
 sethandler <c-f> a:ide
@@ -23,18 +24,18 @@ sethandler <c-r> a:ide
 let mapleader = "\<Space>"
 
 " Window Navigation
-nnoremap <c-\> :SplitVertically<CR>
-nnoremap <c--> :SplitHorizontally<CR>
-nnoremap <c-=> :Unsplit<CR>
-nnoremap <c-m> :MoveEditorToOppositeTabGroup<CR>
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
 
-nnoremap <leader>qt :action CloseEditor<CR>
+nnoremap <leader>l :action MoveEditorToOppositeTabGroup<CR>
+
+nnoremap <leader><Left> :action StretchSplitToLeft<CR>
+nnoremap <leader><Right> :action StretchSplitToRight<CR>
+
+noremap <leader>qt :action CloseEditor<CR>
 nnoremap <leader>qa :action CloseAllEditors<CR>
 nnoremap <leader>gm :action Git.Menu<CR>
-
-" move between open tabs
-nnoremap gk gt
-nnoremap gj gT
 
 " Code editing
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
@@ -42,7 +43,10 @@ nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 nnoremap zc :action CollapseRegion<CR>
 nnoremap zo :action ExpandRegion<CR>
-nnoremap <leader>nf :action NewFile<CR>
+nnoremap <C-p>t :action PinActiveTabToggle<CR>
+
+nnoremap gk gt
+nnoremap gj gT
 
 nnoremap <leader>zc :action CollapseAllRegions<CR>
 nnoremap <leader>zo :action ExpandAllRegions<CR>
@@ -56,11 +60,14 @@ vnoremap > >gv
 " Source Code Navigation
 set incsearch
 
+nnoremap <c-a> :action GotoAction<CR>
 nnoremap <c-t> :action GotoFile<CR>
 nnoremap gr :action FindUsages<CR>
 nnoremap gi :action GotoImplementation<CR>
-nnoremap gd :action GotToDeclaration<CR>
-nnoremap gd :action GotToDeclaration<CR>
+nnoremap gd :action GotoDeclaration<CR>
+
+" Terminal
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
 
 " Build
 nnoremap <leader>bs :action RebuildSolutionAction<CR>

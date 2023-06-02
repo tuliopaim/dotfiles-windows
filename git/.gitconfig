@@ -4,6 +4,7 @@
 [user]
 	email = "tutpaim@gmail.com;"
 	name = Túlio Paim
+	email = tutpaim@gmail.com
 [credential "https://gitlab.com"]
 	provider = generic
 [fetch]
