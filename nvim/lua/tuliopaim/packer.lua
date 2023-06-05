@@ -5,6 +5,7 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+
     -- Telescop
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -20,23 +21,13 @@ return require('packer').startup(function(use)
         tag = 'nightly'
     }
 
-    -- Tabs
-    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+    -- Theme
+    use { "catppuccin/nvim", as = "catppuccin" }
 
-    -- Rose Pine Theme
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            require("rose-pine").setup({
-                disable_italics = true,
-            })
-            vim.cmd('colorscheme rose-pine')
-        end
-    })
-
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use 'mbbill/undotree'
@@ -53,13 +44,13 @@ return require('packer').startup(function(use)
             {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},         -- Required
-            {'hrsh7th/cmp-nvim-lsp'},     -- Required
-            {'hrsh7th/cmp-buffer'},       -- Optional
-            {'hrsh7th/cmp-path'},         -- Optional
-            {'saadparwaiz1/cmp_luasnip'}, -- Optional
-            {'hrsh7th/cmp-nvim-lua'},     -- Optional
-
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {'saadparwaiz1/cmp_luasnip'},
+            {'hrsh7th/cmp-nvim-lua'},
+            { "zbirenbaum/copilot.lua"},
             -- Snippets
             {'L3MON4D3/LuaSnip'},             -- Required
             {'rafamadriz/friendly-snippets'}, -- Optional
@@ -72,9 +63,10 @@ return require('packer').startup(function(use)
     }
 
     -- Markdown
-    use({ "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-    ft = { "markdown" }, })
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 
 end)
+

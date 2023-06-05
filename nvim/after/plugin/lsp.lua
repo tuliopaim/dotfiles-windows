@@ -5,6 +5,8 @@ lsp.ensure_installed({
   'tsserver',
   'eslint',
   'csharp_ls',
+  'lua_ls',
+  'omnisharp'
 })
 
 local check_backspace = function()

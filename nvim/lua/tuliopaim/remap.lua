@@ -13,29 +13,12 @@ vim.api.nvim_set_keymap('n', "<C-u>", "<C-u>zz", opts)
 
 -- Tabs
 -- Move to previous/next
-vim.api.nvim_set_keymap('n', 'gj', '<Cmd>BufferPrevious<CR>', opts)
-vim.api.nvim_set_keymap('n', 'gk', '<Cmd>BufferNext<CR>', opts)
--- Re-order to previous/next
-vim.api.nvim_set_keymap('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
--- Goto buffer in position...
-vim.api.nvim_set_keymap('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-3>', '<Cmd>BufferGoto 3<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-4>', '<Cmd>BufferGoto 4<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-5>', '<Cmd>BufferGoto 5<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-6>', '<Cmd>BufferGoto 6<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-7>', '<Cmd>BufferGoto 7<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
--- Pin/unpin buffer
-vim.api.nvim_set_keymap('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
--- Close buffer
-vim.api.nvim_set_keymap('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
+vim.api.nvim_set_keymap('n', 'gj', ':bprev<enter>', opts)
+vim.api.nvim_set_keymap('n', 'gk', ':bnext<enter>', opts)
+--
+-- Close bufferlsp
+vim.api.nvim_set_keymap('n', '<leader>x', ':bdelete<enter>', opts)
 
--- Resize with arrows
 vim.api.nvim_set_keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 vim.api.nvim_set_keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 vim.api.nvim_set_keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
@@ -62,5 +45,3 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
-
