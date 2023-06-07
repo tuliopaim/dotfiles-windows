@@ -14,6 +14,7 @@ sethandler <c-w> a:vim
 sethandler <c-n> a:vim
 sethandler <c-p> a:vim
 sethandler <c-a> a:vim
+sethandler <c-g> a:vim
 
 " ide shortcuts
 sethandler <c-f> a:ide
@@ -51,11 +52,13 @@ nnoremap gj gT
 nnoremap <leader>zc :action CollapseAllRegions<CR>
 nnoremap <leader>zo :action ExpandAllRegions<CR>
 
-" IndentLines
 nnoremap = :action AutoIndentLines<CR>
 
 vnoremap < <gv
 vnoremap > >gv
+
+" Git
+nnoremap <c-g> :action Vcs.QuickListPopupAction<CR>
 
 " Source Code Navigation
 set incsearch
@@ -71,6 +74,7 @@ nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
 
 " Build
 nnoremap <leader>bs :action RebuildSolutionAction<CR>
+nnoremap <leader>bcs :action CleanSolutionAction<CR>
 nnoremap <leader>bsp :action RebuildStartupProject<CR>
 
 " NERDTree"
