@@ -1,0 +1,70 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+alt+v",
+    "command": "toggleVim"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "shift+f2",
+    "command": "explorer.newFile"
+  },
+  // Disable existing bindings
+  {
+    "key": "space+right",
+    "command": "-workbench.action.nextEditor"
+  },
+  {
+    "key": "space+left",
+    "command": "-workbench.action.previousEditor"
+  },
+  // CUSTOM
+  {
+    "key": "shift+escape",
+    "command": "workbench.action.closePanel"
+  },
+  {
+    "key": "space+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+\\",
+    "command": "workbench.action.splitEditor"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "ctrl+=",
+    "command": "workbench.action.closeEditorsInGroup"
+  },
+  {
+    "key": "space+right",
+    "command": "workbench.action.increaseViewSize"
+  },
+  {
+    "key": "space+left",
+    "command": "workbench.action.decreaseViewSize"
+  },
+  {
+    "key": "space+left",
+    "command": ""
+  },
+  {
+    "key": "escape",
+    "command": "workbench.action.navigateBack",
+  }
+]

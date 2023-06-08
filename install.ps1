@@ -14,8 +14,12 @@ New-Item -ItemType SymbolicLink `
 # VSVIM
 New-Item -ItemType SymbolicLink  -Path "$HOME\_vsvimrc"  -Target "$HOME\.dotfiles\visual_studio\_vsvimrc" 
 
+# VSVIM
+New-Item -ItemType SymbolicLink  -Path "$HOME\AppData\Roaming\Code\User\keybindings.json"  -Target "$HOME\.dotfiles\vscode\keybindings.json" 
+New-Item -ItemType SymbolicLink  -Path "$HOME\AppData\Roaming\Code\User\settings.json"  -Target "$HOME\.dotfiles\vscode\settings.json" 
+
 # IdeaVim
-# New-Item -ItemType SymbolicLink  -Path "$HOME\.ideavimrc"  -Target "$HOME\.dotfiles\ideavim\.ideavimrc"
+New-Item -ItemType SymbolicLink  -Path "$HOME\.ideavimrc"  -Target "$HOME\.dotfiles\ideavim\.ideavimrc"
 
 # GIT 
 New-Item -ItemType SymbolicLink  -Path "$HOME\.gitconfig"  -Target "$HOME\.dotfiles\git\.gitconfig" 

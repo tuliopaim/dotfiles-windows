@@ -1,0 +1,165 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.inlineSuggest.enabled": true,
+    "workbench.iconTheme": "vscode-icons",
+    "redhat.telemetry.enabled": true,
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": false,
+        "markdown": false
+    },
+    "git.autofetch": true,
+    "window.zoomLevel": 2,
+    "vsicons.dontShowNewVersionMessage": true,
+    //VIM
+    "vim.handleKeys": {
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-z>": false,
+        "<C-n>": false,
+        "<C-f>": false,
+        "<C-h>": false,
+        "<C-r>": false,
+        "<C-s>": false,
+        "<C-a>": true,
+        "<C-d>": true,
+        "<C-u>": true,
+        "<C-w>": true,
+        "<C-p>": true,
+        "<C-g>": true
+    },
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<"
+            ],
+            "after": [
+                "<",
+                "g",
+                "v"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "after": [
+                ">",
+                "g",
+                "v"
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.terminal.focus"
+            ]
+        },
+        {
+            "before": [
+                "<C-d>"
+            ],
+            "after": [
+                "<C-d>",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "<C-u>"
+            ],
+            "after": [
+                "<C-u>",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "k"
+            ],
+            "after": [
+                "g",
+                "t"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "j"
+            ],
+            "after": [
+                "g",
+                "T"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.moveEditorToNextGroup"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.moveEditorToPreviousGroup"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "b",
+                "s"
+            ],
+            "commands": [
+                "csdevkit.rebuildSolution"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "b",
+                "c",
+                "s"
+            ],
+            "commands": [
+                "csdevkit.cleanSolution"
+            ]
+        },
+        {
+            "before": ["<space>", "."],
+            "commands": [
+                "workbench.action.focusSideBar"
+            ]
+        },
+        {
+            "before": ["<space>", "e"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+            "before": ["<space>", "<space>"],
+            "commands": ["workbench.action.focusActiveEditorGroup"]
+        }
+    ]
+}
