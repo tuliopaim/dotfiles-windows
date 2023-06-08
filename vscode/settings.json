@@ -14,9 +14,10 @@
         "markdown": false
     },
     "git.autofetch": true,
-    "window.zoomLevel": 2,
     "vsicons.dontShowNewVersionMessage": true,
     //VIM
+    "editor.lineNumbers": "relative",
+    "vim.smartRelativeLine": true,
     "vim.handleKeys": {
         "<C-c>": false,
         "<C-v>": false,
@@ -27,13 +28,14 @@
         "<C-r>": false,
         "<C-s>": false,
         "<C-a>": true,
+        "<C-o>": true,
         "<C-d>": true,
         "<C-u>": true,
         "<C-w>": true,
         "<C-p>": true,
         "<C-g>": true
     },
-    "vim.useSystemClipboard": true,
+    "vim.useSystemClipboard": false,
     "vim.hlsearch": true,
     "vim.leader": "<space>",
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -156,10 +158,7 @@
         {
             "before": ["<space>", "e"],
             "commands": ["workbench.action.toggleSidebarVisibility"]
-        },
-        {
-            "before": ["<space>", "<space>"],
-            "commands": ["workbench.action.focusActiveEditorGroup"]
         }
-    ]
+    ],
+    "window.zoomLevel": 1
 }

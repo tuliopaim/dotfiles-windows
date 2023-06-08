@@ -63,8 +63,4 @@
     "key": "space+left",
     "command": ""
   },
-  {
-    "key": "escape",
-    "command": "workbench.action.navigateBack",
-  }
 ]
