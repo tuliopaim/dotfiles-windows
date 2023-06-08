@@ -15,7 +15,7 @@ vim.api.nvim_set_keymap('n', "<C-u>", "<C-u>zz", opts)
 -- Move to previous/next
 vim.api.nvim_set_keymap('n', 'gj', ':bprev<enter>', opts)
 vim.api.nvim_set_keymap('n', 'gk', ':bnext<enter>', opts)
-vim.api.nvim_set_keymap('n', '<leader>x', ':bdelete<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>x', ':BufferDelete<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gpt', ':BufferPin<CR>', opts)
 
 vim.api.nvim_set_keymap("n", "<C-Up>", ":resize +2<CR>", opts)
