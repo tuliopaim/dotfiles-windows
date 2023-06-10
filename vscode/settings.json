@@ -150,15 +150,34 @@
             ]
         },
         {
+            "before": [
+                "<C-g>",
+            ],
+            "commands": [
+                "workbench.view.scm"
+            ]
+        },
+        {
+            "before": ["<space>", "<Right>"],
+            "commands": [
+                "workbench.action.increaseViewSize"
+            ]
+        },
+        {
+            "before": ["<space>", "<Left>"],
+            "commands": [
+                "workbench.action.decreaseViewSize"
+            ]
+        },
+        {
             "before": ["<space>", "."],
             "commands": [
-                "workbench.action.focusSideBar"
+                "workbench.view.explorer"
             ]
         },
         {
             "before": ["<space>", "e"],
             "commands": ["workbench.action.toggleSidebarVisibility"]
         }
-    ],
-    "window.zoomLevel": 1
+    ]
 }
