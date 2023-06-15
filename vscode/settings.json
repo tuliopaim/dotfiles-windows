@@ -70,34 +70,10 @@
                 "workbench.action.terminal.focus"
             ]
         },
-        {
-            "before": [
-                "<leader>",
-                "n"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.terminal.toggleTerminal"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "u"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.focusActiveEditorGroup"
-                }
-            ]
-        },
         // actions
         {
             "before": [
-                "<C>-t"
+                "<C-t>"
             ],
             "after": [],
             "commands": [
@@ -108,27 +84,13 @@
         },
         {
             "before": [
-                "<leader>",
-                "p",
-                "t"
+                "g",
+                "d"
             ],
             "after": [],
             "commands": [
                 {
-                    "command": "workbench.action.pinEditor"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "u",
-                "t"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.unpinEditor"
+                    "command": "editor.action.revealDefinition"
                 }
             ]
         },
@@ -172,12 +134,38 @@
         {
             "before": [
                 "<leader>",
-                "="
+                "-"
             ],
             "after": [],
             "commands": [
                 {
-                    "command": "workbench.action.unsplit"
+                    "command": "workbench.action.splitEditorDown"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p",
+                "t"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.pinEditor"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "u",
+                "t"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.unpinEditor"
                 }
             ]
         },
