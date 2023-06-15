@@ -57,6 +57,28 @@
                 "g",
                 "v"
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "y"
+            ],
+            "after": [
+                "\"",
+                "+",
+                "y"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "after": [
+                "\"",
+                "+",
+                "p"
+            ]
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
