@@ -1,7 +1,5 @@
 {
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.inlineSuggest.enabled": true,
-    "workbench.iconTheme": "vscode-icons",
     "redhat.telemetry.enabled": true,
     "files.exclude": {
         "**/bin": true,
@@ -13,11 +11,22 @@
         "plaintext": false,
         "markdown": false
     },
-    "git.autofetch": true,
     "vsicons.dontShowNewVersionMessage": true,
-    //VIM
+    "workbench.iconTheme": "vscode-icons",
+    "git.autofetch": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.inlineSuggest.enabled": true,
+    "editor.cursorBlinking": "solid",
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
     "editor.lineNumbers": "relative",
+    //VIM
     "vim.smartRelativeLine": true,
+    "vim.searchHighlightColor": "rgba(150, 255, 255, 0.3)",
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": false,
+    "vim.leader": "<space>",
     "vim.handleKeys": {
         "<C-c>": false,
         "<C-v>": false,
@@ -26,18 +35,8 @@
         "<C-f>": false,
         "<C-h>": false,
         "<C-r>": false,
-        "<C-s>": false,
-        "<C-a>": true,
-        "<C-o>": true,
-        "<C-d>": true,
-        "<C-u>": true,
-        "<C-w>": true,
-        "<C-p>": true,
-        "<C-g>": true
+        "<C-s>": false
     },
-    "vim.useSystemClipboard": false,
-    "vim.hlsearch": true,
-    "vim.leader": "<space>",
     "vim.visualModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -58,9 +57,10 @@
                 "g",
                 "v"
             ]
-        },
+        }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
+        // Terminal
         {
             "before": [
                 "<leader>",
@@ -68,6 +68,117 @@
             ],
             "commands": [
                 "workbench.action.terminal.focus"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "n"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.terminal.toggleTerminal"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "u"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusActiveEditorGroup"
+                }
+            ]
+        },
+        // actions
+        {
+            "before": [
+                "<C>-t"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.quickOpen"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p",
+                "t"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.pinEditor"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "u",
+                "t"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.unpinEditor"
+                }
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "i"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.goToImplementation"
+                }
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.goToReferences"
+                }
+            ]
+        },
+        // editor management
+        {
+            "before": [
+                "<leader>",
+                "v"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.splitEditor"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "="
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.unsplit"
+                }
             ]
         },
         {
@@ -130,6 +241,51 @@
         },
         {
             "before": [
+                "<space>",
+                "<Right>"
+            ],
+            "commands": [
+                "workbench.action.increaseViewSize"
+            ]
+        },
+        {
+            "before": [
+                "<space>",
+                "<Left>"
+            ],
+            "commands": [
+                "workbench.action.decreaseViewSize"
+            ]
+        },
+        {
+            "before": [
+                "<space>",
+                "."
+            ],
+            "commands": [
+                "workbench.view.explorer"
+            ]
+        },
+        {
+            "before": [
+                "<space>",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        },
+        {
+            "before": [
+                "<C-g>"
+            ],
+            "commands": [
+                "workbench.view.scm"
+            ]
+        },
+        // csharp
+        {
+            "before": [
                 "<leader>",
                 "b",
                 "s"
@@ -148,36 +304,7 @@
             "commands": [
                 "csdevkit.cleanSolution"
             ]
-        },
-        {
-            "before": [
-                "<C-g>",
-            ],
-            "commands": [
-                "workbench.view.scm"
-            ]
-        },
-        {
-            "before": ["<space>", "<Right>"],
-            "commands": [
-                "workbench.action.increaseViewSize"
-            ]
-        },
-        {
-            "before": ["<space>", "<Left>"],
-            "commands": [
-                "workbench.action.decreaseViewSize"
-            ]
-        },
-        {
-            "before": ["<space>", "."],
-            "commands": [
-                "workbench.view.explorer"
-            ]
-        },
-        {
-            "before": ["<space>", "e"],
-            "commands": ["workbench.action.toggleSidebarVisibility"]
         }
-    ]
+    ],
+    "window.zoomLevel": 1
 }
