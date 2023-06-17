@@ -5,8 +5,6 @@ set showmode
 set visualbell
 set noerrorbells
 
-set clipboard+=unnamed
-
 " vim shortcuts
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
@@ -25,9 +23,9 @@ sethandler <c-r> a:ide
 let mapleader = "\<Space>"
 
 " Window Navigation
-nnoremap <c-\> :action SplitVertically<CR>
-nnoremap <c--> :action SplitHorizontally<CR>
-nnoremap <c-=> :action Unsplit<CR>
+nnoremap <leader>v :action SplitVertically<CR>
+nnoremap <leader>- :action SplitHorizontally<CR>
+nnoremap <leader>= :action Unsplit<CR>
 
 nnoremap <leader>l :action MoveEditorToOppositeTabGroup<CR>
 
@@ -44,13 +42,18 @@ nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 nnoremap zc :action CollapseRegion<CR>
 nnoremap zo :action ExpandRegion<CR>
-nnoremap <C-p>t :action PinActiveTabToggle<CR>
+nnoremap <leader>pt :action PinActiveTabToggle<CR>
 
 nnoremap gk gt
 nnoremap gj gT
 
 nnoremap <leader>zc :action CollapseAllRegions<CR>
 nnoremap <leader>zo :action ExpandAllRegions<CR>
+
+nnoremap <leader>p "+p
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y "+Y
 
 nnoremap = :action AutoIndentLines<CR>
 
