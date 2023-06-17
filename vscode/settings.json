@@ -11,16 +11,27 @@
         "plaintext": false,
         "markdown": false
     },
+    "grammarly.files.include": [
+        "**/*.md",
+        "**/*.txt"
+    ],
+    "markdown-pdf.displayHeaderFooter": false,
     "vsicons.dontShowNewVersionMessage": true,
     "workbench.iconTheme": "vscode-icons",
-    "git.autofetch": true,
     "workbench.startupEditor": "newUntitledFile",
+    "git.autofetch": true,
+    "diffEditor.wordWrap": "off",
+    "terminal.integrated.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+    "window.zoomLevel": 3,
+    "explorer.confirmDragAndDrop": false,
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
     "editor.inlineSuggest.enabled": true,
     "editor.cursorBlinking": "solid",
     "editor.minimap.enabled": false,
     "editor.formatOnSave": true,
     "editor.lineNumbers": "relative",
     "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.wrappingColumn": 0,
     //VIM
     "vim.smartRelativeLine": true,
     "vim.searchHighlightColor": "rgba(150, 255, 255, 0.3)",
@@ -350,5 +361,4 @@
             ]
         }
     ],
-    "window.zoomLevel": 1
 }
