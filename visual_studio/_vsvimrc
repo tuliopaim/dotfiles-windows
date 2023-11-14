@@ -1,40 +1,40 @@
 " Enable relative line numbers
 set number relativenumber
-
-" Enable incremental search
 set incsearch
-
-" Enable ignore case when searching with /
+set hlsearch
 set ignorecase smartcase
 
 " map leader from , to space
 let mapleader = "\<Space>"
 
-
 " Tab Management
-nnoremap <c-\> :vsc Window.NewVerticalTabGroup<CR>
-nnoremap <Leader>h :vsc Window.MoveToPreviousTabGroup<CR>
-nnoremap <Leader>l :vsc Window.MoveToNextTabGroup<CR>
+nnoremap <leader>v :vsc Window.NewVerticalTabGroup<CR>
+nnoremap <leader>wh :vsc Window.MoveToPreviousTabGroup<CR>
+nnoremap <leader>wl :vsc Window.MoveToNextTabGroup<CR>
 nnoremap gk gt
 nnoremap gj gT
 
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
+vnoremap < <gv
+vnoremap > >gv
 
 " Building
-map <Leader>bs :vsc Build.BuildSolution<CR>
-map <Leader>bp :vsc Build.BuildOnlyProject<CR>
-map <Leader>bc :vsc Build.CleanSolution<CR>
+map <Leader>rs :vsc Build.BuildSolution<CR>
+map <Leader>rp :vsc Build.BuildOnlyProject<CR>
+map <Leader>rc :vsc Build.CleanSolution<CR>
 map <Leader>gc :vsc Team.Git.GoToGitChanges<CR>
 
 " UI Hotkeys
 nnoremap <Leader>. :vsc View.SolutionExplorer<CR>
-nnoremap <Leader>e :vsc View.ErrorList<cr>
 
-"helpers
-nnoremap K     :vsc Edit.QuickInfo<cr>
-nnoremap gK    :vsc Edit.PeekDefinition<cr>
-nnoremap gr    :vsc Edit.FindAllReferences<cr>
+"Helpers
+nnoremap K            :vsc Edit.QuickInfo<cr>
+nnoremap gr           :vsc Edit.FindAllReferences<cr>
+nnoremap <leader>k    :vsc Edit.PeekDefinition<cr>
 
-vnoremap < <gv
-vnoremap > >gv
+" paste the last yanked content
+map <leader>p "0p
+
+"Copy to clipboard
+map <leader>y "+y
